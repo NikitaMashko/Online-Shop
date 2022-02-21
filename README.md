@@ -1,4 +1,4 @@
-# second_inline_shop
+# first_online_shop
 
 ## Project setup
 ```

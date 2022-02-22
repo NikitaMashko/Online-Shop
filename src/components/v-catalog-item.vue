@@ -6,8 +6,9 @@
     <p class="v-catalog-item__price">Price: {{product_data.price}}$</p>
     <button
         class="v-catalog-item__add_to_cart_btn"
-        @click="addToCart"
-    >Add to cart
+        @click="addToCart">
+      <font-awesome-icon icon="fa-solid fa-cart-plus" />
+      Add to cart
     </button>
     </div>
   </div>
@@ -49,5 +50,9 @@ export default {
 
   .v-catalog-item__image {
     width: 100px;
+  }
+
+  .v-catalog-item__add_to_cart_btn {
+    font-size: 14px;
   }
 </style>

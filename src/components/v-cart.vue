@@ -13,6 +13,11 @@
       @increment="increment(index)"
       @decrement="decrement(index)"
     />
+    <div>
+      <button class="v-cart-button" @click="clearCart">
+        <font-awesome-icon icon="fa-solid fa-trash-can" />
+        Clear cart</button>
+    </div>
     <div class="v-cart-total">
       <p class="total-name">Total:</p>
       <p>{{cartTotalCost}}$</p>
@@ -68,6 +73,9 @@ export default {
     },
     deleteFromCart(index) {
       this.DELETE_FROM_CART(index)
+    },
+    clearCart() {
+      this.cart_data = []
     }
   },
 }
@@ -93,5 +101,12 @@ export default {
 
   .total-name {
     margin-right: 16px;
+  }
+
+  .v-cart-button {
+    border: solid;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
   }
 </style>

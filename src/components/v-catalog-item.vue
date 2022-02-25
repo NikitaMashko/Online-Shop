@@ -54,5 +54,6 @@ export default {
 
   .v-catalog-item__add_to_cart_btn {
     font-size: 14px;
+    border: solid;
   }
 </style>

@@ -79,6 +79,7 @@ export default {
           vm.sortedProducts.push(item)
         }
       })
+      this.category = category.name
     }
   },
   mounted() {

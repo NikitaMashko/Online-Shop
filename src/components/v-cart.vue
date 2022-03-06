@@ -1,7 +1,9 @@
 <template>
   <div class="v-cart">
     <router-link :to="{name: 'catalog'}" >
-      <div class="v-catalog-link-to-cart">Back to catalog</div>
+      <button class="v-catalog-link-to-cart">
+        <font-awesome-icon icon="fa-solid fa-arrow-left" />
+        Back to catalog</button>
     </router-link>
     <h1>Cart</h1>
     <p v-if="!cart_data.length">There are no products...</p>
@@ -16,7 +18,8 @@
     <div>
       <button class="v-cart-button" @click="clearCart">
         <font-awesome-icon icon="fa-solid fa-trash-can" />
-        Clear cart</button>
+        Clear cart
+      </button>
     </div>
     <div class="v-cart-total">
       <p class="total-name">Total:</p>

@@ -1,7 +1,9 @@
 <template>
  <div class="v-add-catalog-item">
    <router-link :to="{name: 'catalog'}">
-     <div class="v-catalog-link-to-cart">Back to catalog</div>
+     <button class="v-catalog-link-to-cart">
+       <font-awesome-icon icon="fa-solid fa-arrow-left" />
+       Back to catalog</button>
    </router-link>
    <h1>Add new item</h1>
    <div>

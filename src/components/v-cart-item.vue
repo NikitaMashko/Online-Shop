@@ -8,9 +8,9 @@
      <div class="v-cart-item-quantity">
        <p>Quantity:</p>
        <span>
-         <button class="quantity-btn" @click="decrementItem">-</button>
+         <font-awesome-icon class="quantity-btn" icon="fa-regular fa-square-minus" @click="decrementItem" />
          {{cart_item_data.quantity}}
-         <button class="quantity-btn" @click="incrementItem">+</button>
+         <font-awesome-icon class="quantity-btn" icon="fa-regular fa-square-plus" @click="incrementItem" />
        </span>
      </div>
      <button
@@ -70,5 +70,6 @@ export default {
 
   .quantity-btn {
     cursor: pointer;
+    font-size: 18px;
   }
 </style>

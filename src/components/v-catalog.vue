@@ -1,10 +1,13 @@
 <template>
   <div class="v-catalog">
     <router-link :to="{name: 'new-item'}">
-      <div class="v-catalog-add-item">Add Item</div>
+      <button class="v-catalog-add-item">
+        Add Item
+        <font-awesome-icon icon="fa-solid fa-plus" />
+      </button>
     </router-link>
     <router-link :to="{name: 'cart', params: {cart_data: CART}}" >
-      <div class="v-catalog-link-to-cart">Cart: {{CART.length}}</div>
+      <button class="v-catalog-link-to-cart">Cart: {{CART.length}}</button>
     </router-link>
     <h1>Catalog</h1>
     <div class="filters">
@@ -144,7 +147,10 @@ export default {
   top: 10px;
   right: 10px;
   padding: 16px;
-  border: solid 1px #aeaeae;
+  border: solid;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
 }
 
 .v-catalog-add-item {
@@ -152,7 +158,11 @@ export default {
   top: 10px;
   right: 100px;
   padding: 16px;
-  border: solid 1px #aeaeae;
+  margin-right: 8px;
+  border: solid;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
 }
 
 .filters {

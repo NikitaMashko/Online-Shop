@@ -1,5 +1,8 @@
 <template>
   <div class="v-catalog">
+    <router-link :to="{name: 'register'}">
+      <button class="v-catalog-register">Register</button>
+    </router-link>
     <router-link :to="{name: 'new-item'}">
       <button class="v-catalog-add-item">
         Add Item
@@ -157,6 +160,18 @@ export default {
   position: absolute;
   top: 10px;
   right: 100px;
+  padding: 16px;
+  margin-right: 8px;
+  border: solid;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.v-catalog-register {
+  position: absolute;
+  top: 10px;
+  right: 235px;
   padding: 16px;
   margin-right: 8px;
   border: solid;

@@ -7,7 +7,9 @@ Vue.use(Vuex);
 let store = new Vuex.Store({
     state: {
         products: [],
-        cart: []
+        cart: [],
+        status: '',
+        user: {}
     },
     mutations: {
         SET_PRODUCTS_TO_STATE: (state, products) => {
@@ -40,6 +42,10 @@ let store = new Vuex.Store({
             if (state.cart[index].quantity > 0) {
                 state.cart[index].quantity--
             }
+        },
+        AUTH_SUCCESS: (state, form) => {
+            state.status = 'success'
+            state.form = form
         }
     },
     actions: {
@@ -67,6 +73,15 @@ let store = new Vuex.Store({
         },
         DELETE_FROM_CART({commit}, index) {
             commit('REMOVE_FROM_CART', index)
+        },
+        REGISTER({commit}, form) {
+            console.log('FORM', form)
+            return axios.post('http://127.0.0.1:8000/api/register', form)
+                .then(response => {
+                    commit('AUTH_SUCCESS')
+                    console.log('RESPONSE', response)
+                })
+                .catch(err => console.log(err))
         }
     },
     getters: {
